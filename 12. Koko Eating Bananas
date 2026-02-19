@@ -16,8 +16,8 @@ class Solution {
     }
     boolean isPossible(int[] arr, int k, int speed) {
         int time = 0;
-        for(int i=0;i<arr.length;i++) {
-            time += arr[i]%speed==0 ? arr[i]/speed : (arr[i]/speed)+1;
+        for(int b: arr) {
+            time += b%speed==0 ? b/speed : (b/speed)+1;
             if(time>k) return false;
         }
         return time<=k;
